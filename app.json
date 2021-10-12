@@ -1,0 +1,73 @@
+{
+    "name": "WhatsAsena",
+    "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp.",
+    "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
+    "keywords": ["whatsapp", "userbot", "RPS"],
+    "repository": "https://github.com/rasanjana99/RPSBOT",
+    "website":   "https://wa.me/94712174349",
+    "success_url": "https://wa.me/94712174349",
+    "stack": "container",
+    "env": {
+        "ASENA_SESSION": {
+            "description": "Qr Code",
+            "required": true
+        },
+        "SUDO": {
+            "description": "Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 94xxxxxxxxx (Sri Lankan number +94)",
+            "required": false
+        },
+        "LANGUAGE": {
+            "description": "Bot language.",
+            "required": true,
+            "value": "EN"
+        },
+        "HANDLERS": {
+            "description": "Enter bot prefix to use commands.",
+            "required": true,
+            "value": "^[.!;]"
+        },
+        "SEND_READ": {
+            "description": "Need to show user whether bot message seen or not?",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU": {
+            "description": "Heroku.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "https://dashboard.heroku.com/account Click this link. Scroll down for the API key. Then click the Reveal button. Copy the API key and paste the API Key empty box below.",
+            "required": true
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Use the same App name as first.",
+            "required": true
+        },
+        "DEBUG": {
+            "description": "If you do not know this. Give it up.",
+            "required": true,
+            "value": "false"
+        },
+        "REMOVE_BG_API_KEY": {
+            "description": "Here you go to the website https://remove.bg and sign up and get an API key. Leave the API key in this space.",
+            "required": false
+        },
+        "NO_ONLINE": {
+            "description": "This is not necessarily the case.",
+            "required": false,
+            "value": "true"
+        },
+        "COFFEEHOUSE_API_KEY": {
+            "description": "Here you go to the website  https://coffeehouse.intellivoid.net/  and sign up and get an API key. Leave the API key in this space.",
+            "required": false,
+            "value": "true"
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }
